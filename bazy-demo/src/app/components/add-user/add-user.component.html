@@ -1,0 +1,12 @@
+<p>add-user works!</p>
+<h3>Dodaj użytkownika</h3>
+<label>Imie: </label>
+<input type="text" #name>
+<br>
+<br>
+<label>Email: </label>
+<input type="text" #email>
+<br>
+<br>
+<button (click)="addUser(name.value, email.value)">Dodaj</button>
+

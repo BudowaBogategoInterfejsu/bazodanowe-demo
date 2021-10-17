@@ -14,4 +14,8 @@ export class DemoUserService {
     return this.http.get<DemoUser[]>(`http://localhost:8080/restApi/demoUser/list`);
   }
 
+  addUser(demoUser: DemoUser) {
+    return this.http.post(`http://localhost:8080/restApi/demoUser/add`, demoUser);
+  }
+
 }
