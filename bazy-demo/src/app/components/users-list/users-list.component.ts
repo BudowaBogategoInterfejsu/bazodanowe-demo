@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DemoUser} from '../../dto/DemoUser';
+import {DemoUserService} from '../../services/demo-user.service';
 
 @Component({
   selector: 'app-users-list',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users-list.component.css']
 })
 export class UsersListComponent implements OnInit {
-  users = ['user 1', 'user 2', 'user 3', 'user 4', 'user 5'];
-  constructor() { }
+  demoUsers: DemoUser[] = [];
+
+  constructor(private demoUserService: DemoUserService) { }
 
   ngOnInit(): void {
+    this.demoUserService.getUsers().subscribe( demoUsers => {
+      this.demoUsers = demoUsers;
+    });
   }
 
 }
