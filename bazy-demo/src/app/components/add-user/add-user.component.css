@@ -1,0 +1,9 @@
+.center-form{
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+}
+.blue-snackbar {
+  background: #2196F3;
+}

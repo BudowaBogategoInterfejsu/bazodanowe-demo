@@ -1,12 +1,39 @@
-<p>add-user works!</p>
-<h3>Dodaj użytkownika</h3>
-<label>Imie: </label>
-<input type="text" #name>
-<br>
-<br>
-<label>Email: </label>
-<input type="text" #email>
-<br>
-<br>
-<button (click)="addUser(name.value, email.value)">Dodaj</button>
+<div class="center-form">
+  <mat-card>
+    <h3>Dodaj użytkownika</h3>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label><p>Imię</p></mat-label>
+        <input matInput id="name" type="text" formControlName="name"/>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label><p>Nazwisko</p></mat-label>
+        <input matInput id="surname" type="text" formControlName="surname"/>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label><p>E-mail</p></mat-label>
+        <input matInput id="email" type="email" formControlName="email"/>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label><p>Wiek</p></mat-label>
+        <input matInput id="age" type="number" min="0" formControlName="age"/>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Płeć</mat-label>
+        <mat-select id="gender" formControlName="gender">
+          <mat-option value="mężczyzna">mężczyzna</mat-option>
+          <mat-option value="kobieta">kobieta</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
 
+      <button mat-raised-button color="primary" type="submit">Zapisz</button>
+    </form>
+
+  </mat-card>
+
+</div>

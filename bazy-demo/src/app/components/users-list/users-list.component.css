@@ -1,0 +1,21 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+/*.actionColumn{*/
+/*  margin-right:-100px;*/
+/*}*/
+
+.editButton{
+  margin-right:16px;
+}
+.mat-column-actions {
+  width: 180px;
+  text-align: center;
+}
+
